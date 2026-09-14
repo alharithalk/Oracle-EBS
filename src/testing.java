@@ -71,5 +71,6 @@ public class testing {
         System.out.println("69");
         System.out.println("70");
         System.out.println("71");
+        System.out.println("72");
     }
 }
