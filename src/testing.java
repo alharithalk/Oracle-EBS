@@ -69,5 +69,6 @@ public class testing {
         System.out.println("67");
         System.out.println("68");
         System.out.println("69");
+        System.out.println("70");
     }
 }
