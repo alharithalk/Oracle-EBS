@@ -1,0 +1,44 @@
+
+1. OPEN WINSCP
+==============
+
+
+2. CONNECT TO EBS SERVER
+========================
+
+WinSCP
+    -> New Session
+
+
+Host Name:
+EBS.EXAMPLE.COM
+
+User Name:
+
+Password:
+
+
+
+3. OPEN THE EBS FORMS DIRECTORY
+===============================
+
+Full Path:
+
+/u01/install/VISION/fs1/EBSapps/appl/fnd/12.0.0/forms/US
+
+
+
+5. MOVE THE .FMX FILE TO EBS
+============================
+
+Drag and Drop:
+
+ALHARITHALKINDI.fmx
+
+From:
+
+Local Computer
+
+To:
+
+/u01/install/VISION/fs1/EBSapps/appl/fnd/12.0.0/forms/US

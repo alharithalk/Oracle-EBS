@@ -1,0 +1,150 @@
+FORM NAME:
+ALHARITHALKINDI
+
+
+1. CREATE CANVAS
+================
+
+ORACLE FORMS BUILDER
+    -> Object Navigator
+        -> Canvases
+            -> Create
+
+Canvas Name:
+
+CAN_DEPT_EMP
+
+
+2. CREATE DEPT DATA BLOCK
+=========================
+
+ORACLE FORMS BUILDER
+    -> Object Navigator
+        -> Data Blocks
+            -> Create
+
+Create Data Block using:
+
+Table:
+DEPT
+
+Place the block on:
+
+Canvas:
+CAN_DEPT_EMP
+
+
+3. CREATE EMP DATA BLOCK
+========================
+
+ORACLE FORMS BUILDER
+    -> Object Navigator
+        -> Data Blocks
+            -> Create
+
+Create Data Block using:
+
+Table:
+EMP
+
+Place the block on:
+
+Canvas:
+CAN_DEPT_EMP
+
+
+4. CREATE MASTER-DETAIL RELATIONSHIP
+====================================
+
+When prompted to create the relationship:
+
+Select:
+
+Remove Auto Join
+
+Then click:
+
+Create Relationship
+
+
+Relationship Fields:
+
+Master Block : DEPT
+Master Item  : DEPTNO
+Detail Block : EMP
+Detail Item  : DEPTNO
+
+
+Join Displayed:
+
+EMP.DEPTNO = DEPT.DEPTNO
+
+
+5. SYSTEM-CREATED MASTER-DETAIL OBJECTS
+=======================================
+
+Oracle Forms automatically creates:
+
+3 Triggers
+3 Program Units
+
+These are created to make the two blocks work as a:
+
+MASTER-DETAIL FORM
+
+
+Master Block:
+DEPT
+
+Detail Block:
+EMP
+
+
+6. SAVE THE FORM
+================
+
+ORACLE FORMS BUILDER
+    -> File
+        -> Save As
+
+File Name:
+
+ALHARITHALKINDI.fmb
+
+
+7. COMPILE THE FORM
+===================
+
+ORACLE FORMS BUILDER
+    -> Program
+        -> Compile Module
+
+Source File:
+
+ALHARITHALKINDI.fmb
+
+Compiled File:
+
+ALHARITHALKINDI.fmx
+
+
+8. LOGIN TO WINSCP
+==================
+
+Open:
+
+WinSCP
+
+Login to the Oracle EBS Server.
+
+
+9. MOVE THE COMPILED FORM TO EBS SERVER
+========================================
+
+Move:
+
+ALHARITHALKINDI.fmx
+
+To:
+
+/u01/install/VISION/fs1/EBSapps/appl/fnd/12.0.0/forms/US
