@@ -1,0 +1,164 @@
+MASTER DETAIL FORM
+==================================================
+
+FORM FILE:
+ALHARITHALKINDI.fmb
+
+FORM MODULE:
+ALHARITHALKINDI
+
+
+1. CREATE NEW FORM MODULE
+=========================
+
+ORACLE FORMS BUILDER
+    -> File
+        -> New
+            -> Form
+
+
+Form Module:
+ALHARITHALKINDI
+
+
+2. CREATE DATA BLOCK - DEPT
+===========================
+
+ORACLE FORMS BUILDER
+    -> Object Navigator
+        -> Data Blocks
+            -> DEPT
+
+Table:
+DEPT
+
+Key Column:
+DEPT.DEPTNO
+
+Key Type:
+Primary Key
+
+
+3. CREATE DATA BLOCK - EMP
+==========================
+
+ORACLE FORMS BUILDER
+    -> Object Navigator
+        -> Data Blocks
+            -> EMP
+
+Table:
+EMP
+
+Key Column:
+EMP.DEPTNO
+
+Key Type:
+Foreign Key
+
+
+4. CREATE MASTER-DETAIL RELATIONSHIP
+====================================
+
+Master Block:
+DEPT
+
+Detail Block:
+EMP
+
+Relationship:
+
+DEPT.DEPTNO
+    -> EMP.DEPTNO
+
+
+Master:
+DEPT
+
+Detail:
+EMP
+
+
+IMPORTANT:
+A Master record cannot be deleted while dependent Detail records exist.
+
+
+5. CREATE CANVAS
+================
+
+ORACLE FORMS BUILDER
+    -> Object Navigator
+        -> Canvases
+            -> CAN_DEPT_EMP
+
+Canvas Name:
+CAN_DEPT_EMP
+
+
+6. PLACE BOTH DATA BLOCKS ON THE SAME CANVAS
+============================================
+
+Canvas:
+CAN_DEPT_EMP
+
+Data Blocks:
+
+DEPT
+EMP
+
+
+
+7. PROGRAM UNITS CREATED
+========================
+
+ORACLE FORMS BUILDER
+    -> Object Navigator
+        -> Program Units
+
+Program Units:
+
+CHECK_PACKAGE_FAILURE
+CLEAR_ALL_MASTER_DETAILS
+QUERY_MASTER_DETAILS
+
+
+8. SAVE THE FORM
+================
+
+ORACLE FORMS BUILDER
+    -> File
+        -> Save As
+
+File Name:
+ALHARITHALKINDI.fmb
+
+
+9. COMPILE THE FORM
+====================
+
+ORACLE FORMS BUILDER
+    -> Program
+        -> Compile Module
+
+Source File:
+ALHARITHALKINDI.fmb
+
+Compiled File:
+ALHARITHALKINDI.fmx
+
+
+10. CONNECT TO ORACLE EBS SERVER & MOVE COMPILED FORM
+======================================================
+
+Open:
+WinSCP
+
+Using the credentials in the file
+
+
+Move:
+ALHARITHALKINDI.fmx
+
+To:
+
+/u01/install/VISION/fs1/EBSapps/appl/fnd/12.0.0/forms/US
