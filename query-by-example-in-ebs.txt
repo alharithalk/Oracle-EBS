@@ -1,0 +1,48 @@
+1. LOGIN TO ORACLE EBS
+======================
+
+
+
+2. OPEN USER DEFINITION
+=======================
+
+SYSTEM ADMINISTRATOR
+    -> Security
+        -> User
+            -> Define
+
+
+3. ENTER QUERY BY EXAMPLE MODE
+==============================
+
+View
+    -> Query By Example
+        -> Enter
+
+
+The fields should change from:
+
+Yellow
+
+To:
+
+Blue
+
+
+4. ENTER SEARCH CRITERIA
+========================
+
+In the User Name field, enter:
+
+I%
+
+
+
+5. RUN THE QUERY
+================
+
+View
+    -> Query By Example
+        -> Run
+
+IT. SHOWS ALL THE USER START WITH I
