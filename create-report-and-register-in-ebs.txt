@@ -1,0 +1,278 @@
+
+
+
+PART 1 - CREATE REPORT USING REPORT WIZARD
+==========================================
+
+
+1. START REPORT WIZARD
+======================
+
+ORACLE REPORTS BUILDER
+    -> File
+        -> New
+            -> Report
+                -> Use the Report Wizard
+
+
+2. CONNECT TO DATABASE
+======================
+
+Database:
+
+APPS/apps@EBSDB
+
+
+
+3. OPEN QUERY BUILDER
+=====================
+
+REPORT WIZARD
+    -> Data
+        -> Query Builder
+
+
+4. SELECT EMP TABLE
+===================
+
+In Query Builder:
+
+Select Table:
+
+EMP
+
+Select:
+
+ALL COLUMNS
+
+
+Oracle builds the query:
+
+SELECT ALL
+       EMP.EMPNO,
+       EMP.ENAME,
+       EMP.JOB,
+       EMP.MGR,
+       EMP.HIREDATE,
+       EMP.SAL,
+       EMP.COMM,
+       EMP.DEPTNO
+FROM EMP;
+
+
+Click:
+
+OK
+
+
+OR
+
+Type the query manually:
+
+SELECT * FROM EMP;
+
+
+5. SELECT AGGREGATE FUNCTIONS
+=============================
+
+REPORT WIZARD
+    -> Totals
+
+
+Set:
+
+EMPNO
+    -> COUNT
+
+SAL
+    -> SUM
+
+
+6. FINISH REPORT WIZARD
+=======================
+
+Complete the remaining Wizard steps.
+
+Click:
+
+Finish
+
+
+7. SAVE THE REPORT
+==================
+
+ORACLE REPORTS BUILDER
+    -> File
+        -> Save As
+
+File Name:
+
+ANILEMPREPORT.rdf
+
+Format:
+
+Report Binary Format
+
+
+PART 2 - MOVE REPORT TO ORACLE EBS SERVER
+=========================================
+
+
+8. OPEN WINSCP
+==============
+
+WINDOWS
+    -> Start
+        -> WinSCP
+
+
+9. CONNECT TO EBS SERVER
+========================
+
+Login to the Oracle EBS Server.
+
+
+10. MOVE THE REPORT FILE
+========================
+
+Move:
+
+ANILEMPREPORT.rdf
+
+To:
+
+/u01/install/VISION/fs1/EBSapps/appl/fnd/12.0.0/reports/US
+
+
+PART 3 - REGISTER REPORT IN ORACLE EBS
+======================================
+
+
+11. CREATE EXECUTABLE
+=====================
+
+APPLICATION DEVELOPER
+    -> Concurrent
+        -> Executable
+
+
+Fields:
+
+Executable Name : ANILEMPREPORT
+Short Name      : ANILEMPREPORT
+Application     : Application Object Library
+Execution Method: Oracle Reports
+Execution File  : ANILEMPREPORT
+
+SAVE
+
+
+IMPORTANT:
+
+Do not include:
+
+.rdf
+
+in the Execution File Name.
+
+
+13. CREATE CONCURRENT PROGRAM
+=============================
+
+APPLICATION DEVELOPER
+    -> Concurrent
+        -> Program
+
+
+Fields:
+
+Program       : ANILEMPREPORT
+Short Name    : ANILEMPREPORT
+Application   : Application Object Library
+Executable    : ANILEMPREPORT
+Use in SRS    : Checked
+
+SAVE
+
+
+14. ADD PROGRAM TO EXISTING REQUEST GROUP
+=========================================
+
+SYSTEM ADMINISTRATOR
+    -> Security
+        -> Responsibility
+            -> Request
+
+
+Open Existing Request Group:
+
+ALHARITH_RG_PGMS
+
+
+Add Program:
+
+ANILEMPREPORT
+
+
+SAVE
+
+
+15. SWITCH TO RESPONSIBILITY
+============================
+
+Switch Responsibility:
+
+ALHARITHK_RESP
+
+
+16. OPEN REQUESTS
+=================
+
+ALHARITHK_RESP
+    -> View
+        -> Requests
+
+
+17. SUBMIT A NEW REQUEST
+========================
+
+Click:
+
+Submit a New Request
+
+Select:
+
+Single Request
+
+Click:
+
+OK
+
+
+18. SELECT REPORT
+=================
+
+Name:
+
+ANILEMPREPORT
+
+
+19. SUBMIT REQUEST
+==================
+
+Click:
+
+Submit
+
+
+20. CHECK REQUEST STATUS
+========================
+
+Click:
+
+Refresh Data
+
+Wait until:
+
+Completed
+
