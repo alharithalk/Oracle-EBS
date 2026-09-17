@@ -1,0 +1,89 @@
+
+PROCEDURE
+===========
+
+
+1. OPEN SQL PLUS
+=================
+
+
+2. WRITE THE FOLLOWING PROCEDURE
+=================================
+
+SET SERVEROUTPUT ON;
+
+CREATE. OR REPLACE PROCEDURE ALHARITH_PR_EBS(ERRBUF OUT VARCHAR2, RETCODE OUT NUMBER) IS
+BEGIN
+LINE(FND_FILE.OUTPUT, 'WELCOME TO ORACLE EBS!!!!');
+END;
+/
+
+
+3. Execute One Procedure
+===========================
+
+SQL> EXEC ALHARITH_PR_EBS;
+
+
+4. Execute Multiple Procedures
+================================
+
+SQL> BEGIN
+       ALHARITH_PR_TEST3;
+       ALHARITH_PR_TEST2;
+       ALHARITH_PR_TEST;
+     END;
+     /
+
+
+
+
+
+FUNCTION
+===========
+
+
+1. WRITE THE FOLLOWING FUNCTION
+=================================
+
+CREATE OR REPLACE FUNCTION ALHARITH_FN_TEST RETURN VARCHAR2 IS
+
+    V_MSG VARCHAR2(2000);
+BEGIN
+    V_MSG := 'WELCOME TO ORACLE EBS FUNCTIONS...!!!';
+
+    RETURN V_MSG;
+END;
+/
+
+
+2. Call the Function from SQL
+===============================
+SQL> SELECT ALHARITH_FN_TEST
+     FROM DUAL;
+
+
+
+3. Call a Procedure and Function Inside a PL/SQL Block
+====================================================
+
+SQL> DECLARE
+       X VARCHAR2(2000);
+     BEGIN
+       ALHARITH_PR_TEST;
+
+       X := ALHARITH_FN_TEST;
+
+       DBMS_OUTPUT.PUT_LINE(X);
+     END;
+     /
+
+
+FLOW OF THE ABOVE BLOCK
+-----------------------
+
+1. Declare variable X.
+2. Run procedure ALHARITH_PR_TEST.
+3. Call function ALHARITH_FN_TEST.
+4. Store the returned value in X.
+5. Print X using DBMS_OUTPUT.PUT_LINE.
