@@ -1,0 +1,127 @@
+
+REGISTER ALHARITH_PR_SYSDT
+=======================================
+
+
+
+1. CREATE / COMPILE THE PROCEDURE
+=================================
+
+DONE IN SQL PLUS
+
+2. CREATE EXECUTABLE
+====================
+
+APPLICATION DEVELOPER
+    -> Concurrent
+        -> Executable
+
+Fields:
+
+Executable Name : ALHARITH_PR_SYSDT
+Short Name      : ALHARITH_PR_SYSDT
+Application     : Application Object Library
+Execution Method: PL/SQL Stored Procedure
+Execution File  : ALHARITH_PR_SYSDT
+
+SAVE
+
+
+3. CREATE CONCURRENT PROGRAM
+============================
+
+APPLICATION DEVELOPER
+    -> Concurrent
+        -> Program
+
+Fields:
+
+Program       : ALHARITH_PR_SYSDT
+Short Name    : ALHARITH_PR_SYSDT
+Application   : Application Object Library
+Executable    : ALHARITH_PR_SYSDT
+Method        : PL/SQL Stored Procedure
+Output Format : HTML
+Use in SRS    : Checked
+
+SAVE
+
+
+4. ADD PROGRAM TO EXISTING REQUEST GROUP
+========================================
+
+SYSTEM ADMINISTRATOR
+    -> Security
+        -> Responsibility
+            -> Request
+
+Existing Request Group:
+
+ALHARITH_RG_PGMS
+
+Add Program:
+
+ALHARITH_PR_SYSDT
+
+SAVE
+
+
+5. SWITCH TO EXISTING RESPONSIBILITY
+====================================
+
+Switch Responsibility:
+
+ALHARITH_RESP
+
+
+6. OPEN REQUESTS
+================
+
+ALHARITH_RESP
+    -> View
+        -> Requests
+
+
+7. SUBMIT A NEW REQUEST
+=======================
+
+Click:
+
+Submit a New Request
+
+Select:
+
+Single Request
+
+Click:
+
+OK
+
+
+8. SELECT THE PROGRAM
+=====================
+
+Name:
+
+ALHARITH_PR_SYSDT
+
+
+9. SUBMIT THE REQUEST
+=====================
+
+Click:
+
+Submit
+
+
+10. CHECK REQUEST STATUS
+========================
+
+Click:
+
+Refresh Data
+
+Wait until:
+
+Completed
+
