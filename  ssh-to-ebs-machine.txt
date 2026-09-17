@@ -1,0 +1,36 @@
+1. OPEN WINSCP
+==============
+
+
+2. CREATE A NEW SESSION
+=======================
+
+WinSCP
+    -> New Session
+
+
+3. ENTER CONNECTION DETAILS
+===========================
+
+Host Name:
+EBS.EXAMPLE.COM
+
+User Name:
+
+Password:
+
+
+4. CONNECT TO THE EBS SERVER
+============================
+
+
+5. EBS SERVER CONNECTED
+=======================
+
+After login:
+
+Left Side:
+Local Computer Files
+
+Right Side:
+Oracle EBS Server Files
