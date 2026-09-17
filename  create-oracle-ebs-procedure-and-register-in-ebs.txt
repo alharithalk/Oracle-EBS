@@ -1,0 +1,133 @@
+
+================================
+AFTER CREATING THE PROCEDURE
+================================
+
+STEP 1 - CREATE THE EXECUTABLE
+==============================
+
+Navigation:
+
+APPLICATION DEVELOPER
+    -> CONCURRENT
+        -> EXECUTABLE
+
+
+Create a new Executable.
+
+
+STEP 2 - CREATE THE CONCURRENT PROGRAM
+======================================
+
+Navigation:
+
+APPLICATION DEVELOPER
+    -> CONCURRENT
+        -> PROGRAM
+
+
+Create a new Concurrent Program.
+
+
+STEP 3 - ADD THE PROGRAM TO THE EXISTING REQUEST GROUP
+======================================================
+
+Switch to:
+
+SYSTEM ADMINISTRATOR
+
+
+Navigation:
+
+SYSTEM ADMINISTRATOR
+    -> SECURITY
+        -> RESPONSIBILITY
+            -> REQUEST
+
+
+Query the existing Request Group.
+
+
+SAVE the record.
+
+
+
+STEP 4 - SWITCH TO YOUR EXISTING RESPONSIBILITY
+===============================================
+
+Switch to the Responsibility that already uses the Request Group.
+
+
+
+STEP 5 - SUBMIT THE REQUEST
+===========================
+
+
+Navigation:
+
+VIEW
+    -> REQUESTS
+
+
+Select:
+
+SUBMIT A NEW REQUEST
+
+
+Choose:
+
+SINGLE REQUEST
+
+
+Click:
+
+OK
+
+
+STEP 6 - SELECT THE PROGRAM
+===========================
+
+Click the LOV:
+
+LOV = List of Values
+
+
+Search for:
+
+ALHARITH_PR_SYSDT
+
+
+Select the program.
+
+
+STEP 7 - SUBMIT
+===============
+
+Click:
+
+SUBMIT
+
+
+Oracle EBS creates a new Concurrent Request.
+
+
+STEP 8 - CHECK THE REQUEST STATUS
+=================================
+
+Use:
+
+REFRESH DATA
+
+
+Typical status flow:
+
+PENDING
+    ↓
+RUNNING
+    ↓
+COMPLETED
+
+
+Wait until the request reaches:
+
+COMPLETED
