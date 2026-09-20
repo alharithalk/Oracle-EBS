@@ -1,0 +1,156 @@
+
+
+REPORT:
+ALHARITHKPARREPORT
+
+
+
+1. CREATE VALUE SET
+===================
+
+APPLICATION DEVELOPER
+    -> Application
+        -> Validation
+            -> Set
+
+
+Fields:
+
+Name            : ALHARITHK_VS_DNO
+Format Type     : Number
+Maximum Size    : 4
+Validation Type : Table
+
+
+Click:
+
+Edit Information
+
+
+2. DEFINE TABLE VALIDATION
+==========================
+
+Fields:
+
+Table Name  : EMP
+Value Column: DEPTNO
+
+
+SAVE
+
+
+3. OPEN THE CONCURRENT PROGRAM
+==============================
+
+APPLICATION DEVELOPER
+    -> Concurrent
+        -> Program
+
+
+Query Program:
+
+ALHARITHKPARREPORT
+
+
+4. OPEN PARAMETERS
+==================
+
+APPLICATION DEVELOPER
+    -> Concurrent
+        -> Program
+            -> Parameters
+
+
+Parameter:
+
+DNO
+
+
+Change Value Set To:
+
+ALHARITHK_VS_DNO
+
+
+SAVE
+
+
+5. SWITCH TO RESPONSIBILITY
+===========================
+
+Switch Responsibility:
+
+ALHARITHK_RESP
+
+
+6. OPEN REQUESTS
+================
+
+ALHARITHK_RESP
+    -> View
+        -> Requests
+
+
+7. SUBMIT A NEW REQUEST
+=======================
+
+Click:
+
+Submit a New Request
+
+Select:
+
+Single Request
+
+Click:
+
+OK
+
+
+8. SELECT REPORT
+================
+
+Name:
+
+ALHARITHKPARREPORT
+
+
+9. ENTER PARAMETER
+==================
+
+Parameter:
+
+DNO
+
+
+Click the LOV.
+
+
+Displayed Values:
+
+10
+20
+30
+...
+
+
+Select the required DEPTNO.
+
+
+10. SUBMIT REQUEST
+==================
+
+Click:
+
+Submit
+
+
+11. CHECK REQUEST STATUS
+========================
+
+Click:
+
+Refresh Data
+
+Wait until:
+
+Completed
