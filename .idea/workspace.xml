@@ -40,6 +40,12 @@
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Codeline\IdeaProjects\Oracle-EBS\Sprint 16-ebs" />
+      <recent name="C:\Users\Codeline\IdeaProjects\Oracle-EBS" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Oracle-EBS" />
